@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const Layout = ({children}) => {
   return (
-    <div className=''>
+    <div className='overflow-x-hidden'>
       <Navbar/>
       <main>{children}</main>
       <Footer/>
