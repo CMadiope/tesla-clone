@@ -24,7 +24,7 @@ const Model_3 = () => {
         }}
         className='min-h-screen bg-center bg-cover bg-no-repeat duration-200 ease-in-out w-full flex flex-col justify-between items-center'
       >
-        <div className='pt-[25%] ss:pt-[20%] sm:pt-[15%] md:pt-[10%]'>
+        <div className='pt-[35%] ss:pt-[20%] sm:pt-[15%] md:pt-[10%]'>
           <h1 className='text-center text-4xl'>Model 3</h1>
           <p className='text-center font-normal pt-2 underline'>
             Schedule a Demo Drive
