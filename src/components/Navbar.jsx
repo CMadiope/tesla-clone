@@ -17,14 +17,14 @@ const Navbar = () => {
     <div className='min-w-full overflow-x-hidden'>
       <div
         className={`${
-          (router.pathname === "/model_s") |
+          router.pathname === "/model_s" |
           "/model_3" |
           "model_x" |
           "model_y" |
           "solar_roof" |
           "solar_panels" |
           "/powerwall"
-            ? "w-full absolute"
+            ? "w-full absolute "
             : "fixed z-20 w-full"
         }`}
       >
@@ -51,7 +51,16 @@ const Navbar = () => {
           <Link href='/'>
             <Image src={logo} alt='logo' className='w-[120px]' />
           </Link>
-          <div className='hidden lg:flex'>
+          <div
+            className={`${
+              (router.pathname === "/model_3") |
+              "/model_y" |
+              "/solar_roof" |
+              "/powerwall"
+                ? "hidden lg:flex text-white"
+                : "hidden lg:flex"
+            }`}
+          >
             <ul className='flex gap-6 items-center font-medium'>
               <li>
                 <Link href='/model_s'>Model S</Link>
@@ -77,7 +86,16 @@ const Navbar = () => {
             </ul>
           </div>
           <div className='flex  gap-6  items-center font-normal text-sm'>
-            <div className='hidden lg:flex gap-6'>
+            <div
+              className={`${
+                (router.pathname === "/model_3") |
+                "/model_y" |
+                "/solar_roof" |
+                "/powerwall"
+                  ? "text-white hidden lg:flex gap-6"
+                  : "hidden lg:flex gap-6"
+              }`}
+            >
               <Link
                 href='/shop'
                 className='hover:bg-gray-400/80 py-1 px-2 rounded-lg duration-700'
@@ -93,7 +111,14 @@ const Navbar = () => {
             </div>
 
             <button
-              className='py-1 px-2 rounded-lg  max-lg:bg-slate-300 flex hover:bg-gray-400/80 duration-700'
+              className={`${
+                (router.pathname === "/model_3") |
+                "/model_y" |
+                "/solar_roof" |
+                "/powerwall"
+                  ? "text-white py-1 px-2 rounded-lg  max-lg:bg-gray-400/80  flex duration-700"
+                  : "py-1 px-2 rounded-lg  max-lg:bg-slate-300 flex hover:bg-gray-400/80 duration-700"
+              }`}
               onClick={handleMenu}
             >
               Menu
