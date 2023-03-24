@@ -7,7 +7,7 @@ const Layout = ({children}) => {
     <div className='overflow-x-hidden'>
       <Navbar/>
       <main>{children}</main>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

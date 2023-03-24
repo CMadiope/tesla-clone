@@ -19,6 +19,9 @@ module.exports = {
         lg: "1200px",
         xl: "1700px",
       },
+      fontFamily: {
+        gotham: ["Gotham Ssm", "sans-serif"],
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

@@ -3,9 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/Logo2.png";
 import { RxCross1 } from "react-icons/rx";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const router = useRouter();
 
   const handleMenu = () => {
     setMenu(!menu);
@@ -13,18 +15,42 @@ const Navbar = () => {
 
   return (
     <div className='min-w-full overflow-x-hidden'>
-      <div className='fixed z-20 '>
-        <div className='text-center py-3 bg-white text-gray-500 text-[14px] px-6 w-screen '>
+      <div
+        className={`${
+          (router.pathname === "/model_s") |
+          "/model_3" |
+          "model_x" |
+          "model_y" |
+          "solar_roof" |
+          "solar_panels" |
+          "/powerwall"
+            ? "w-full absolute"
+            : "fixed z-20 w-full"
+        }`}
+      >
+        <div
+          className={`${
+            (router.pathname === "/model_s") |
+            "/model_3" |
+            "model_x" |
+            "model_y" |
+            "solar_roof" |
+            "solar_panels" |
+            "/powerwall"
+              ? "hidden"
+              : "text-center py-3 bg-white text-gray-500 text-[14px] px-6 w-screen "
+          }`}
+        >
           New Model 3 and Model Y vehicles qualify for a federal tax credit for
           eligible buyers.{" "}
           <Link href='/' className='underline'>
             Learn More
           </Link>
         </div>
-        <div className=' flex justify-between py-4  px-4 items-center z-10 lg:px-12'>
-          <div>
+        <div className=' flex justify-between py-4  px-4 items-center z-10 lg:px-12 '>
+          <Link href='/'>
             <Image src={logo} alt='logo' className='w-[120px]' />
-          </div>
+          </Link>
           <div className='hidden lg:flex'>
             <ul className='flex gap-6 items-center font-medium'>
               <li>
@@ -50,14 +76,24 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className='flex  gap-6  items-center font-medium'>
+          <div className='flex  gap-6  items-center font-normal text-sm'>
             <div className='hidden lg:flex gap-6'>
-              <Link href='/shop'>Shop</Link>
-              <Link href='/account'>Account</Link>
+              <Link
+                href='/shop'
+                className='hover:bg-gray-400/80 py-1 px-2 rounded-lg duration-700'
+              >
+                Shop
+              </Link>
+              <Link
+                href='/account'
+                className='hover:bg-gray-400/80 py-1 px-2 rounded-lg duration-700'
+              >
+                Account
+              </Link>
             </div>
 
             <button
-              className='py-1 px-3 rounded-lg  max-lg:bg-slate-300 flex'
+              className='py-1 px-2 rounded-lg  max-lg:bg-slate-300 flex hover:bg-gray-400/80 duration-700'
               onClick={handleMenu}
             >
               Menu
@@ -67,10 +103,9 @@ const Navbar = () => {
       </div>
       {/* side nav */}
       <div
-        className={
-          `fixed h-screen top-0 right-0 z-20  bg-white w-[320px] ease-in-out duration-300 overflow-y-scroll ${menu?'translate-x-0':'translate-x-full'}`
-            
-        }
+        className={`fixed h-screen top-0 right-0 z-20  bg-white w-[320px] ease-in-out duration-300 overflow-y-scroll ${
+          menu ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div
           className='flex justify-end pr-10 pt-6 cursor-pointer'

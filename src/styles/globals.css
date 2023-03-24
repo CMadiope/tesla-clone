@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/gotham-ssm");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Poppins';
+  font-family: "Gotham SSm", sans-serif;
+}
+@layer base {
+  li {
+    @apply hover:bg-gray-400/80 duration-700 px-2 py-1 rounded-lg font-normal text-sm;
+  }
+  
 }
