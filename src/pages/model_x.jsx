@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 
 const Model_x = () => {
   return (
-    <div className=''>
+    <div className='w-full'>
       <section
         style={{
           backgroundImage: `url(${main.src})`,
@@ -73,6 +73,7 @@ const Model_x = () => {
           height='100%'
           playsInline
           loop
+          controls
           muted
           className='ss:p-20 py-20 rounded-lg'
         >
