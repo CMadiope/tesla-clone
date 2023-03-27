@@ -17,7 +17,7 @@ const Navbar = () => {
     <div className='min-w-full overflow-x-hidden'>
       <div
         className={`${
-          router.pathname === "/model_s" |
+          (router.pathname === "/model_s") |
           "/model_3" |
           "model_x" |
           "model_y" |
@@ -30,14 +30,14 @@ const Navbar = () => {
       >
         <div
           className={`${
-            (router.pathname === "/model_s") |
-            "/model_3" |
-            "model_x" |
-            "model_y" |
-            "solar_roof" |
-            "solar_panels" |
+            router.pathname === "/model_s" ||
+            "/model_3" ||
+            "model_x" ||
+            "model_y" ||
+            "solar_roof" ||
+            "solar_panels" ||
             "/powerwall"
-              ? "hidden"
+              ? "hidden "
               : "text-center py-3 bg-white text-gray-500 text-[14px] px-6 w-screen "
           }`}
         >
@@ -53,12 +53,10 @@ const Navbar = () => {
           </Link>
           <div
             className={`${
-              (router.pathname === "/model_3") |
+              router.pathname === "/model_3" |
               "/model_y" |
-              "/solar_roof" |
-              "/powerwall"
-                ? "hidden lg:flex text-white"
-                : "hidden lg:flex"
+              "/solar_roof" | "/powerwall"? "hidden lg:flex text-white"
+                : "hidden lg:flex text-black"
             }`}
           >
             <ul className='flex gap-6 items-center font-medium'>
