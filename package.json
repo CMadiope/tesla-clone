@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/carousel": "^6.0.5",
+    "@mantine/core": "^6.0.5",
+    "@mantine/hooks": "^6.0.5",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-react": "^7.1.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.9.1",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -9,6 +9,7 @@ import app from "../../public/solar-roof/SR-tesla-app.jpeg";
 import design from "../../public/powerwall/Design.jpeg";
 import specs from "../../public/powerwall/specs.jpeg";
 
+
 const powerwall = () => {
   return (
     <div className='text-white'>
@@ -45,7 +46,7 @@ const powerwall = () => {
               <span className='text-xs font-light text-center'>Monitoring</span>
             </div>
           </div>
-          <div className='flex flex-row  gap-2 justify-center  w-full text-sm'>
+          <div className='flex flex-row max-w-[400px] gap-2 justify-center  w-full text-sm'>
             <button className='py-2 px-6 border-2 w-full rounded-md hover:text-black hover:bg-white duration-500'>
               Order Now
             </button>
